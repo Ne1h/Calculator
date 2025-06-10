@@ -1,0 +1,118 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: 320px;
+    background-color: #333;
+}
+
+.calculator-display {
+    width: calc(100% - 20px); /* Account for padding */
+    height: 70px;
+    background-color: #222;
+    color: #fff;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* Creates thin lines between buttons */
+    background-color: #3C3C3C; /* Grid line color */
+}
+
+.calculator-keys button {
+    height: 70px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #505050;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calculator-keys button:hover {
+    background-color: #6a6a6a;
+}
+
+.calculator-keys button:active,
+.calculator-keys button.key-active-kb /* Style for keyboard activation */ {
+    background-color: #7f7f7f;
+    outline: 2px solid #9ecaed; /* Subtle focus outline */
+    box-shadow: 0 0 5px #9ecaed;
+}
+
+
+.key-operator {
+    background-color: #FF9500; /* Orange for operators */
+    color: white;
+}
+
+.key-operator:hover {
+    background-color: #e08500;
+}
+
+.key-operator:active,
+.calculator-keys button.key-operator.key-active-kb {
+    background-color: #c77400;
+}
+
+.key-equal {
+    background-color: #FF9500; /* Orange for equals */
+    color: white;
+    grid-column: span 2; /* Make equals button wider */
+}
+
+.key-equal:hover {
+    background-color: #e08500;
+}
+
+.key-equal:active,
+.calculator-keys button.key-equal.key-active-kb {
+    background-color: #c77400;
+}
+
+/* Style for AC and C buttons */
+.calculator-keys button[data-action="all-clear"],
+.calculator-keys button[data-action="clear-entry"] {
+    background-color: #D4D4D2;
+    color: #1C1C1C;
+}
+.calculator-keys button[data-action="all-clear"]:hover,
+.calculator-keys button[data-action="clear-entry"]:hover {
+    background-color: #bcbcba;
+}
+.calculator-keys button[data-action="all-clear"]:active,
+.calculator-keys button[data-action="clear-entry"]:active,
+.calculator-keys button[data-action="all-clear"].key-active-kb,
+.calculator-keys button[data-action="clear-entry"].key-active-kb {
+    background-color: #a5a5a3;
+}
+
+/* Ensure bottom corners are rounded for the last row of buttons */
+/* No specific rounding needed due to 1px gap technique, parent handles overall rounding */
+/* Buttons like AC, C, . might be in the last row cells */
+.calculator-keys button:nth-child(17), /* AC */
+.calculator-keys button:nth-child(18), /* C */
+.calculator-keys button:nth-child(19)  /* . */
+{
+   /* No specific rounding needed here if they are the true last elements */
+}
