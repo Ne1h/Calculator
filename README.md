@@ -7,7 +7,7 @@ A basic calculator web app built using **HTML**, **CSS**, and **JavaScript**. It
 
 - Addition, subtraction, multiplication, and division
 - User-friendly interface
-- Keyboard and button input support *(optional: if you implemented it)*
+- Keyboard and button input support 
 - Responsive design for various screen sizes
 
 ## 💻 Tech Stack
