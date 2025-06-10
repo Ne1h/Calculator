@@ -19,6 +19,7 @@ A basic calculator web app built using **HTML**, **CSS**, and **JavaScript**. It
 
 calculator/
 │
+|
 ├── index.html        # Main HTML file
 ├── index.css         # CSS styling
 ├── index.tsx         # JavaScript logic
